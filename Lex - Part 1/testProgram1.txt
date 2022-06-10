@@ -1,0 +1,14 @@
+main(){
+	createSet(#readFromFile);
+	fReadSet(#readFromFile, fileName);
+	
+	sizeControl = getSetSize(#readFromFile);
+	
+	if(sizeControl > 0 ){
+		printSet(#readFromFile, fileName);
+	}
+	else{
+		print("Given file is EMPTY");
+	}
+	
+}
