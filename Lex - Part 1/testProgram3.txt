@@ -1,0 +1,26 @@
+main(){
+	
+	define myDeleteFunction(#set1, 'x'){
+		
+		if(isEmpty(#set1)){
+			print("Given file is EMPTY");
+			return #set1;
+		}
+		
+		if(setHas('x', #set1)){
+			remove('x', #set1);
+		}
+		else{
+			print("This set doesnt contain this element");
+			
+		}
+		
+		return #set1;
+	}
+	
+	createSet(#readFromFile);
+	fReadSet(#readFromFile, fileName);
+	
+	myDeleteFunction(#readFromFile, '3');
+	printSet(#readFromFile);
+}
