@@ -1,0 +1,47 @@
+main(){	
+	define can@delete(#set){
+		if(setHas(#set, '12')){
+			return true;
+		}	
+		return false;
+	}
+
+	// some variables//
+	elma = 5;
+	armut = false;
+	something = NONE;
+
+	createSet(#set1);
+	
+	// you can have empty sets in this language //
+	#set1 = {};
+	
+	createSet(#set2);
+	// you can put any type in a set//
+	#set2 = {1, "", false, elma, armut};
+
+	createSet(#set3);
+	#set3 = {12.54543, 43.2, "nice", something};
+	createSet(#intersection);
+
+	createSet(#set4);
+	#set4 = {'21', '12'};
+
+	//chained set operations: left associative//
+	#intersection = #set2 &=& #set1 &=& #set3 -=- #set4;
+
+	//chained boolean left associative//
+	if(can@delete(#set1) | isEmpty(#intersection) & getSetSize(#set3) > 12 | elma == 5 | setHas(#set4, 12.54543)){
+		print("Interesting sizes");
+		return true;
+	}
+	else{
+		print("Not interesting");
+	}
+
+	for(eleman: #set4){
+		//traversing through array//
+		print(eleman);
+	}
+	
+}

@@ -1,0 +1,66 @@
+main(){
+	
+	x;
+	y;
+	z;
+	t;
+	
+	x = 21;
+	y = 16;
+	z = 12;
+	t = 19;
+
+	fjdskfj = "";	
+	createSet(#set1);
+	#set1 = {1,'2',fjsdjhf32jc,'4','5','6'};
+	
+	createSet(#set2);
+	#set2 = {'1','2','3','4'};
+	
+	
+	createSet(#set3);
+	#set3 = {};
+	add(#set3, 3);
+	createSet(#intersectionSet);
+	createSet(#unionSet);
+	createSet(#differenceSet);
+	createSet(#complementSet);
+	createSet(#cartesianSet);
+	
+	#intersectionSet = #set1 &=& #set2;
+	#unionSet = #set1 +=+ #set2;
+	#differenceSet = #set1 -=- #set2;
+	#complementSet = #set1 !=! #set2;
+	#cartesianSet = #set1 X=X #set2;
+	
+	printSet(#intersectionSet);
+	printSet(#unionSet);
+	printSet(#differenceSet);
+	printSet(#complementSet);
+	printSet(#cartesianSet);
+	
+	if(setHas(#differenceSet, '6')){
+		add(#differenceSet, '11');
+		add(#set2,'11');
+	}
+	else{
+		print("This set already have 7");
+	}
+	
+	printSet(#differenceSet);
+	printSet(#set2);
+
+	if(setHas( #cartesianSet, '6')){
+		add(#cartesianSet, '11');
+		add(#set1,'11');
+	}
+	else{
+		print("This set already have 7");
+	}
+	
+	
+	printSet(#cartesianSet);
+	printSet(#set2);
+	
+}
+

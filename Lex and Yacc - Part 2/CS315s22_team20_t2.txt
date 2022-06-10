@@ -1,0 +1,20 @@
+main(){
+
+	createSet(#set1);
+	#set1 = {'1','2','3','4'};
+	
+	createSet(#set2);
+	#set2 = {'3','4','5','6','7'};
+	
+	createSet(#unionSet);
+	#unionSet =  #set1 +=+ #set2;
+	
+	printSet(#unionSet);
+	
+	fWriteSet(#unionSet, fileName);
+
+	//deleting the variables //
+	deleteSet(#unionSet);
+	deleteSet(#set1);
+	deleteSet(#set2);
+}
